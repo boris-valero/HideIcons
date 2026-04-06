@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>ghosticons</id>
+	<name>GhostIcons</name>
+	<summary>Application GhostIcons</summary>
+	<description><![CDATA[Application destinée à améliorer l'expérience utilisateur des associations et collectifs utilisant GhostIcons]]></description>
+	<version>1.0.0</version>
+	<licence>agpl</licence>
+	<author mail="bvalero@framasoft.org" homepage="https://github.com/boris-valero/">Boris Valero</author>
+	<namespace>GhostIcons</namespace>
+	<category>customization</category>
+	<bugs>https://framagit.org/framasoft/ghosticons/custom-apps/ghosticons</bugs>
+	<dependencies>
+		<nextcloud min-version="31" max-version="33"/>
+	</dependencies>
+	<settings>
+		<admin>OCA\GhostIcons\Settings\Admin</admin>
+		<admin-section>OCA\GhostIcons\Settings\AdminSection</admin-section>
+	</settings>
+</info>
