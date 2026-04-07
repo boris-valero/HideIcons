@@ -28,19 +28,19 @@ class CSSInjectionListener implements IEventListener {
 			return;
 		}
 
-		$hiddenApps = $this->configProxy->getAppValueArray('hidden_apps');
-		$hiddenApps = array_filter($hiddenApps, fn ($appId) => is_string($appId) && !empty($appId));
+		$hiddenApps = $this->sanitizeAppIds($this->configProxy->getAppValueArray('hidden_apps'));
+		$orderedApps = $this->sanitizeAppIds($this->configProxy->getAppValueArray('ordered_apps'));
 
-		if (empty($hiddenApps)) {
+		if (empty($hiddenApps) && empty($orderedApps)) {
 			return;
 		}
 
-		$this->injectHiddenAppsCSS($hiddenApps);
+		$this->injectTopMenuCSS($hiddenApps, $orderedApps);
 	}
 
-	private function injectHiddenAppsCSS(array $hiddenApps): void {
-		$css = $this->generateHiddenAppsCSS($hiddenApps);
-		Util::addHeader('style', ['id' => 'ghosticons-hidden-apps'], $css);
+	private function injectTopMenuCSS(array $hiddenApps, array $orderedApps): void {
+		$css = $this->generateHiddenAppsCSS($hiddenApps) . $this->generateOrderedAppsCSS($orderedApps);
+		Util::addHeader('style', ['id' => 'ghosticons-top-menu-customization'], $css);
 	}
 
 	private function generateHiddenAppsCSS(array $hiddenApps): string {
@@ -53,5 +53,41 @@ class CSSInjectionListener implements IEventListener {
 		}
 
 		return $css;
+	}
+
+	private function generateOrderedAppsCSS(array $orderedApps): string {
+		$css = '';
+
+		/** @var string $appId */
+		foreach ($orderedApps as $index => $appId) {
+			$order = $index + 1;
+			$css .= ".app-menu-entry:has(a.app-menu-entry__link[href\$=\\2f apps\\2f {$appId}\\2f ]) { order: {$order}; }";
+		}
+
+		return $css;
+	}
+
+	private function sanitizeAppIds(array $apps): array {
+		$seen = [];
+		$sanitized = [];
+
+		foreach ($apps as $appId) {
+			if (!is_string($appId) || $appId === '') {
+				continue;
+			}
+
+			if (preg_match('/^[a-zA-Z0-9_-]+$/', $appId) !== 1) {
+				continue;
+			}
+
+			if (isset($seen[$appId])) {
+				continue;
+			}
+
+			$seen[$appId] = true;
+			$sanitized[] = $appId;
+		}
+
+		return $sanitized;
 	}
 }

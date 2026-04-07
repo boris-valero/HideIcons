@@ -20,5 +20,10 @@ return [
 			'url' => '/api/admin/hidden',
 			'verb' => 'POST'
 		],
+		[
+			'name' => 'adminApi#setPreferences',
+			'url' => '/api/admin/preferences',
+			'verb' => 'POST'
+		],
 	]
 ];
