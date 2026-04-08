@@ -27,10 +27,7 @@
 					</td>
 					<td>{{ app.name }}</td>
 					<td>
-						<NcCheckboxRadioSwitch
-							v-model="app.hidden"
-							:disabled="app.protected"
-							:title="app.protected ? t('apporder', 'This application cannot be hidden') : ''" />
+						<NcCheckboxRadioSwitch v-model="app.hidden" />
 					</td>
 				</tr>
 			</tbody>

@@ -22,7 +22,7 @@ msgid "Information:"
 msgstr ""
 
 #: templates/settings/admin-form.php:15
-msgid "Customize the interface by hiding certain applications from the menu (except Files and Activity) for you and for all users of this AppOrder instance."
+msgid "Customize the interface by hiding certain applications from the menu for you and for all users of this AppOrder instance."
 msgstr ""
 
 #: templates/settings/admin-form.php:16
@@ -39,14 +39,6 @@ msgstr ""
 
 #: templates/settings/admin-form.php:24
 msgid "Do you want to hide the icon?"
-msgstr ""
-
-#: templates/settings/admin-form.php:37
-msgid "Protected"
-msgstr ""
-
-#: templates/settings/admin-form.php:37
-msgid "This application cannot be hidden"
 msgstr ""
 
 #: templates/settings/admin-form.php:44

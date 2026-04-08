@@ -17,8 +17,6 @@ use OCP\IUserSession;
  * @psalm-suppress UnusedClass
  */
 class AdminApiController extends Controller {
-	private const PROTECTED_APPS = ['files', 'activity'];
-
 	/**
 	 * @psalm-suppress PossiblyUnusedMethod
 	 */
@@ -50,7 +48,6 @@ class AdminApiController extends Controller {
 				'id' => $appId,
 				'name' => $app['name'],
 				'hidden' => in_array($appId, $hiddenApps, true),
-				'protected' => in_array($appId, self::PROTECTED_APPS, true),
 			];
 		}
 
@@ -67,17 +64,11 @@ class AdminApiController extends Controller {
 		/** @psalm-suppress MixedAssignment */
 		$hiddenParam = $this->request->getParam('hidden', []);
 		$validatedApps = $this->sanitizeAppList($hiddenParam, $availableAppIds);
-
-		// Filter out protected apps
-		$filteredApps = array_diff($validatedApps, self::PROTECTED_APPS);
-		$ignoredProtected = array_intersect($validatedApps, self::PROTECTED_APPS);
-
-		$this->config->setAppValueArray('hidden_apps', $filteredApps);
+		$this->config->setAppValueArray('hidden_apps', $validatedApps);
 
 		return new DataResponse([
 			'success' => true,
-			'hidden_apps' => $filteredApps,
-			'ignored_protected_apps' => array_values($ignoredProtected),
+			'hidden_apps' => $validatedApps,
 		]);
 	}
 
@@ -94,18 +85,15 @@ class AdminApiController extends Controller {
 		$validatedHidden = $this->sanitizeAppList($hiddenParam, $availableAppIds);
 		$validatedOrder = $this->sanitizeAppList($orderedParam, $availableAppIds);
 
-		$filteredHidden = array_values(array_diff($validatedHidden, self::PROTECTED_APPS));
-		$ignoredProtected = array_values(array_intersect($validatedHidden, self::PROTECTED_APPS));
 		$completeOrder = $this->appendMissingAppIds($validatedOrder, $availableAppIds);
 
-		$this->config->setAppValueArray('hidden_apps', $filteredHidden);
+		$this->config->setAppValueArray('hidden_apps', $validatedHidden);
 		$this->config->setAppValueArray('ordered_apps', $completeOrder);
 
 		return new DataResponse([
 			'success' => true,
-			'hidden_apps' => $filteredHidden,
+			'hidden_apps' => $validatedHidden,
 			'ordered_apps' => $completeOrder,
-			'ignored_protected_apps' => $ignoredProtected,
 		]);
 	}
 
