@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace OCA\GhostIcons\Settings;
+namespace OCA\AppOrder\Settings;
 
-use OCA\GhostIcons\AppInfo\Application;
+use OCA\AppOrder\AppInfo\Application;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\Settings\ISettings;
 
 /**
- * Provides the GhostIcons admin panel
+ * Provides the AppOrder admin panel
  * @psalm-suppress UnusedClass
  */
 class Admin implements ISettings {

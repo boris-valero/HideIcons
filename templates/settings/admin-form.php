@@ -1,13 +1,15 @@
 <?php
 /**
- * Template pour les paramètres administrateur GhostIcons
+ * Template pour les paramètres administrateur AppOrder
  *
  * @var array $_
  * @var array $apps Liste des applications installées
  */
 
-script('ghosticons', 'ghosticons-admin-settings');
-style('ghosticons', 'ghosticons-admin-settings');
+?>
+<?php
+script('apporder', 'apporder-admin-settings');
+style('apporder', 'apporder-admin-settings');
 ?>
 
-<div id="ghosticons-admin-settings"></div>
+<div id="apporder-admin-settings"></div>

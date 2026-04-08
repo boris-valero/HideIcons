@@ -1,10 +1,10 @@
-# French translation for GhostIcons
-# This file is distributed under the same license as the GhostIcons application.
+# French translation for AppOrder
+# This file is distributed under the same license as the AppOrder application.
 # Boris Valero <bvalero@framasoft.org>, 2025.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: GhostIcons 1.0.0\n"
+"Project-Id-Version: AppOrder 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-16 12:00+0000\n"
 "PO-Revision-Date: 2025-12-16 12:00+0000\n"
@@ -21,8 +21,8 @@ msgid "Information:"
 msgstr "Information :"
 
 #: templates/settings/admin-form.php:15
-msgid "Customize the interface by hiding certain applications from the menu (except Files and Activity) for you and for all users of this GhostIcons instance."
-msgstr "Personnalisez l'interface en masquant certaines applications du menu (hors Fichiers et Activité) pour vous et pour tous les utilisateurs de cette instance GhostIcons."
+msgid "Customize the interface by hiding certain applications from the menu (except Files and Activity) for you and for all users of this AppOrder instance."
+msgstr "Personnalisez l'interface en masquant certaines applications du menu (hors Fichiers et Activite) pour vous et pour tous les utilisateurs de cette instance AppOrder."
 
 #: templates/settings/admin-form.php:16
 msgid "Instructions:"

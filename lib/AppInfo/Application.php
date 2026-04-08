@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OCA\GhostIcons\AppInfo;
+namespace OCA\AppOrder\AppInfo;
 
-use OCA\GhostIcons\Listener\CSSInjectionListener;
+use OCA\AppOrder\Listener\CSSInjectionListener;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
@@ -12,7 +12,7 @@ use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\AppFramework\Http\Events\BeforeTemplateRenderedEvent;
 
 class Application extends App implements IBootstrap {
-	public const APP_ID = 'ghosticons';
+	public const APP_ID = 'apporder';
 	/**
 	 * @psalm-suppress PossiblyUnusedMethod
 	 */

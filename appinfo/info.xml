@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
-	<id>ghosticons</id>
-	<name>GhostIcons</name>
-	<summary>Application GhostIcons</summary>
-	<description><![CDATA[Application destinée à améliorer l'expérience utilisateur des associations et collectifs utilisant GhostIcons]]></description>
+	<id>apporder</id>
+	<name>AppOrder</name>
+	<summary>Application AppOrder</summary>
+	<description><![CDATA[This application allows you to customize the Nextcloud menu by hiding the app icons you don't want to see or by rearranging the order of the Nextcloud app icons to suit your preferences]]></description>
 	<version>1.0.0</version>
 	<licence>agpl</licence>
 	<author mail="bvalero@framasoft.org" homepage="https://github.com/boris-valero/">Boris Valero</author>
-	<namespace>GhostIcons</namespace>
+	<namespace>AppOrder</namespace>
 	<category>customization</category>
-	<bugs>https://framagit.org/framasoft/ghosticons/custom-apps/ghosticons</bugs>
+	<bugs>https://github.com/boris-valero/apporder/issues</bugs>
 	<dependencies>
-		<nextcloud min-version="31" max-version="33"/>
+		<nextcloud min-version="32" max-version="34"/>
 	</dependencies>
 	<settings>
-		<admin>OCA\GhostIcons\Settings\Admin</admin>
-		<admin-section>OCA\GhostIcons\Settings\AdminSection</admin-section>
+		<admin>OCA\AppOrder\Settings\Admin</admin>
+		<admin-section>OCA\AppOrder\Settings\AdminSection</admin-section>
 	</settings>
 </info>

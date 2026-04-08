@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace OCA\GhostIcons\Controller;
+namespace OCA\AppOrder\Controller;
 
-use OCA\GhostIcons\Metrics\Calendars;
-use OCA\GhostIcons\Metrics\Chats;
-use OCA\GhostIcons\Metrics\Circles;
-use OCA\GhostIcons\Metrics\Collectives;
-use OCA\GhostIcons\Metrics\Conversations;
-use OCA\GhostIcons\Metrics\Deck;
-use OCA\GhostIcons\Metrics\Filecache;
-use OCA\GhostIcons\Metrics\Forms;
-use OCA\GhostIcons\Metrics\Tables;
+use OCA\AppOrder\Metrics\Calendars;
+use OCA\AppOrder\Metrics\Chats;
+use OCA\AppOrder\Metrics\Circles;
+use OCA\AppOrder\Metrics\Collectives;
+use OCA\AppOrder\Metrics\Conversations;
+use OCA\AppOrder\Metrics\Deck;
+use OCA\AppOrder\Metrics\Filecache;
+use OCA\AppOrder\Metrics\Forms;
+use OCA\AppOrder\Metrics\Tables;
 use OCP\AppFramework\Http\Attribute\ApiRoute;
 use OCP\AppFramework\Http\Attribute\CORS;
 use OCP\AppFramework\Http\Attribute\NoCSRFRequired;
@@ -23,7 +23,7 @@ use OCP\IRequest;
 
 class StatsController extends OCSController {
 	private const CACHE_TTL_SECONDS = 6 * 3600;
-	private const CACHE_NAMESPACE = 'ghosticons-stats';
+	private const CACHE_NAMESPACE = 'apporder-stats';
 	private const CACHE_KEY = 'all-metrics-v1';
 
 	public function __construct(

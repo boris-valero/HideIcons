@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OCA\GhostIcons\Service;
+namespace OCA\AppOrder\Service;
 
-use OCA\GhostIcons\AppInfo\Application;
+use OCA\AppOrder\AppInfo\Application;
 use OCP\IAppConfig;
 
 class ConfigProxy {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OCA\GhostIcons\Listener;
+namespace OCA\AppOrder\Listener;
 
-use OCA\GhostIcons\Service\ConfigProxy;
+use OCA\AppOrder\Service\ConfigProxy;
 use OCP\AppFramework\Http\Events\BeforeTemplateRenderedEvent;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
@@ -40,7 +40,7 @@ class CSSInjectionListener implements IEventListener {
 
 	private function injectTopMenuCSS(array $hiddenApps, array $orderedApps): void {
 		$css = $this->generateHiddenAppsCSS($hiddenApps) . $this->generateOrderedAppsCSS($orderedApps);
-		Util::addHeader('style', ['id' => 'ghosticons-top-menu-customization'], $css);
+		Util::addHeader('style', ['id' => 'apporder-top-menu-customization'], $css);
 	}
 
 	private function generateHiddenAppsCSS(array $hiddenApps): string {

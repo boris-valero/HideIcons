@@ -1,9 +1,9 @@
 {
     "openapi": "3.0.3",
     "info": {
-        "title": "ghosticons",
+        "title": "apporder",
         "version": "0.0.1",
-        "description": "Application GhostIcons",
+        "description": "Application AppOrder",
         "license": {
             "name": "agpl"
         }
@@ -47,7 +47,7 @@
         }
     },
     "paths": {
-        "/ocs/v2.php/apps/ghosticons/api": {
+        "/ocs/v2.php/apps/apporder/api": {
             "get": {
                 "operationId": "api-index",
                 "summary": "An example API endpoint",

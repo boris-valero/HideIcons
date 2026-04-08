@@ -1,6 +1,6 @@
 {
-	"name": "nextcloud/ghosticons",
-	"description": "<![CDATA[Application destinée à améliorer l'expérience utilisateur des associations et collectifs utilisant GhostIcons]]>",
+	"name": "nextcloud/apporder",
+	"description": "<![CDATA[Application destinée à améliorer l'expérience utilisateur des associations et collectifs en réorganisant et masquant les icônes d'applications (AppOrder)]]>",
 	"license": "AGPL-3.0-or-later",
 	"authors": [
 		{
@@ -10,7 +10,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"OCA\\GhostIcons\\": "lib/"
+			"OCA\\AppOrder\\": "lib/"
 		}
 	},
 	"scripts": {

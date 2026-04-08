@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OCA\GhostIcons\Metrics;
+namespace OCA\AppOrder\Metrics;
 
 class Circles extends BaseMetrics {
 	public function countCircles(): int {

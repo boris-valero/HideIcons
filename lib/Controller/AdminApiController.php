@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OCA\GhostIcons\Controller;
+namespace OCA\AppOrder\Controller;
 
-use OCA\GhostIcons\Service\ConfigProxy;
+use OCA\AppOrder\Service\ConfigProxy;
 use OCP\App\IAppManager;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\Attribute\AdminRequired;

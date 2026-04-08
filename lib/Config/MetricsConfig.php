@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OCA\GhostIcons\Config;
+namespace OCA\AppOrder\Config;
 
 class MetricsConfig {
 	public const N_TOP_BIGGEST_FILES = 10;

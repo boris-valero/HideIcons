@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace OCA\GhostIcons\Metrics;
+namespace OCA\AppOrder\Metrics;
 
-use OCA\GhostIcons\Config\MetricsConfig;
+use OCA\AppOrder\Config\MetricsConfig;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;
 

@@ -1,14 +1,14 @@
 <template>
-	<form id="ghosticons-admin-settings" @submit.prevent="save">
+	<form id="apporder-admin-settings" @submit.prevent="save">
 		<p class="hint">
-			{{ t('ghosticons', 'Drag and drop rows to define the top menu order.') }}
+			{{ t('apporder', 'Drag and drop rows to define the top menu order.') }}
 		</p>
 		<table>
 			<thead>
 				<tr>
-					<th>{{ t('ghosticons', 'Order') }}</th>
-					<th>{{ t('ghosticons', 'Application name') }}</th>
-					<th>{{ t('ghosticons', 'Do you want to hide the icon?') }}</th>
+					<th>{{ t('apporder', 'Order') }}</th>
+					<th>{{ t('apporder', 'Application name') }}</th>
+					<th>{{ t('apporder', 'Do you want to hide the icon?') }}</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -22,7 +22,7 @@
 					@drop="onDrop(index, $event)"
 					@dragend="onDragEnd">
 					<td class="order-cell">
-						<span class="drag-handle" :title="t('ghosticons', 'Drag to reorder')">:::</span>
+						<span class="drag-handle" :title="t('apporder', 'Drag to reorder')">:::</span>
 						<span>{{ index + 1 }}</span>
 					</td>
 					<td>{{ app.name }}</td>
@@ -30,14 +30,14 @@
 						<NcCheckboxRadioSwitch
 							v-model="app.hidden"
 							:disabled="app.protected"
-							:title="app.protected ? t('ghosticons', 'This application cannot be hidden') : ''" />
+							:title="app.protected ? t('apporder', 'This application cannot be hidden') : ''" />
 					</td>
 				</tr>
 			</tbody>
 		</table>
 		<div class="form-actions">
 			<NcButton type="primary" native-type="submit">
-				{{ t('ghosticons', 'Save') }}
+				{{ t('apporder', 'Save') }}
 			</NcButton>
 		</div>
 	</form>
@@ -54,15 +54,15 @@ import '@nextcloud/dialogs/style.css'
 
 const apps = ref([])
 const draggedIndex = ref(null)
-const appsUrl = generateUrl('/apps/ghosticons/api/admin/apps')
-const preferencesUrl = generateUrl('/apps/ghosticons/api/admin/preferences')
+const appsUrl = generateUrl('/apps/apporder/api/admin/apps')
+const preferencesUrl = generateUrl('/apps/apporder/api/admin/preferences')
 
 onMounted(async () => {
 	try {
 		const response = await axios.get(appsUrl)
 		apps.value = response.data
 	} catch (e) {
-		showError(t('ghosticons', 'Loading error'))
+		showError(t('apporder', 'Loading error'))
 	}
 })
 
@@ -108,15 +108,15 @@ const save = async () => {
 				'Content-Type': 'application/x-www-form-urlencoded',
 			},
 		})
-		showSuccess(t('ghosticons', 'Saved!'))
+		showSuccess(t('apporder', 'Saved!'))
 	} catch (e) {
-		showError(t('ghosticons', 'Save error'))
+		showError(t('apporder', 'Save error'))
 	}
 }
 </script>
 
 <style scoped lang="scss">
-#ghosticons-admin-settings {
+#apporder-admin-settings {
 	max-width: 700px;
 
 	.hint {

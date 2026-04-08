@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OCA\GhostIcons\Metrics;
+namespace OCA\AppOrder\Metrics;
 
 class Deck extends BaseMetrics {
 	public function countCards(): int {
