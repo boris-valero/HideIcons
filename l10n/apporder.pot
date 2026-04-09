@@ -17,34 +17,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: templates/settings/admin-form.php:15
-msgid "Information:"
-msgstr ""
-
-#: templates/settings/admin-form.php:15
-msgid "Customize the interface by hiding certain applications from the menu for you and for all users of this AppOrder instance."
-msgstr ""
-
-#: templates/settings/admin-form.php:16
-msgid "Instructions:"
-msgstr ""
-
-#: templates/settings/admin-form.php:16
-msgid "Check the box in the right column to hide an application and uncheck this same box to display it again. Don't forget to click \"Save\". On the next page reload, the icon will be hidden."
-msgstr ""
-
-#: templates/settings/admin-form.php:23
+#: src/components/AdminSettings.vue:10
 msgid "Application name"
 msgstr ""
 
-#: templates/settings/admin-form.php:24
+#: src/components/AdminSettings.vue:11
 msgid "Do you want to hide the icon?"
 msgstr ""
 
-#: templates/settings/admin-form.php:44
-msgid "Hide"
+#: src/components/AdminSettings.vue:4
+msgid "Drag and drop rows to define the top menu order."
 msgstr ""
 
-#: templates/settings/admin-form.php:53
+#: src/components/AdminSettings.vue:25
+msgid "Drag to reorder"
+msgstr ""
+
+#: src/components/AdminSettings.vue:62
+msgid "Loading error"
+msgstr ""
+
+#: src/components/AdminSettings.vue:9
+msgid "Order"
+msgstr ""
+
+#: src/components/AdminSettings.vue:37
 msgid "Save"
+msgstr ""
+
+#: src/components/AdminSettings.vue:110
+msgid "Save error"
+msgstr ""
+
+#: src/components/AdminSettings.vue:108
+msgid "Saved!"
+msgstr ""
+
+#: lib/Settings/AdminSection.php:28
+msgid "AppOrder"
 msgstr ""

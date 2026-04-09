@@ -1,18 +1,12 @@
 {
     "translations": {
-        "Information:": "Information:",
-        "Customize the interface by hiding certain applications from the menu for you and for all users of this AppOrder instance.": "Customize the interface by hiding certain applications from the menu for you and for all users of this AppOrder instance.",
-        "Instructions:": "Instructions:",
-        "Check the box in the right column to hide an application and uncheck this same box to display it again. Don't forget to click \"Save\". On the next page reload, the icon will be hidden.": "Check the box in the right column to hide an application and uncheck this same box to display it again. Don't forget to click \"Save\". On the next page reload, the icon will be hidden.",
         "Application name": "Application name",
         "Order": "Order",
         "Drag and drop rows to define the top menu order.": "Drag and drop rows to define the top menu order.",
         "Drag to reorder": "Drag to reorder",
         "Do you want to hide the icon?": "Do you want to hide the icon?",
-        "Hide": "Hide",
         "Save": "Save",
         "Loading error": "Loading error",
-        "Saving…": "Saving…",
         "Saved!": "Saved!",
         "Save error": "Save error"
     },

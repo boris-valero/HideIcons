@@ -16,34 +16,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: templates/settings/admin-form.php:15
-msgid "Information:"
-msgstr "Information :"
-
-#: templates/settings/admin-form.php:15
-msgid "Customize the interface by hiding certain applications from the menu for you and for all users of this AppOrder instance."
-msgstr "Personnalisez l'interface en masquant certaines applications du menu pour vous et pour tous les utilisateurs de cette instance AppOrder."
-
-#: templates/settings/admin-form.php:16
-msgid "Instructions:"
-msgstr "Mode d'emploi :"
-
-#: templates/settings/admin-form.php:16
-msgid "Check the box in the right column to hide an application and uncheck this same box to display it again. Don't forget to click \"Save\". On the next page reload, the icon will be hidden."
-msgstr "Cochez la case de la colonne de droite pour masquer une application et décochez cette même case pour l'afficher de nouveau. N'oubliez pas de cliquer sur \"Sauvegarder\". Au prochain rechargement de la page, l'icône sera masquée."
-
-#: templates/settings/admin-form.php:23
+#: src/components/AdminSettings.vue:10
 msgid "Application name"
 msgstr "Nom de l'application"
 
-#: templates/settings/admin-form.php:24
+#: src/components/AdminSettings.vue:11
 msgid "Do you want to hide the icon?"
 msgstr "Souhaitez-vous cacher l'icône ?"
 
-#: templates/settings/admin-form.php:44
-msgid "Hide"
-msgstr "Cacher"
+#: src/components/AdminSettings.vue:4
+msgid "Drag and drop rows to define the top menu order."
+msgstr "Glissez-deposez les lignes pour definir l'ordre du menu du haut."
 
-#: templates/settings/admin-form.php:53
+#: src/components/AdminSettings.vue:25
+msgid "Drag to reorder"
+msgstr "Glisser pour reordonner"
+
+#: src/components/AdminSettings.vue:62
+msgid "Loading error"
+msgstr "Erreur de chargement"
+
+#: src/components/AdminSettings.vue:9
+msgid "Order"
+msgstr "Ordre"
+
+#: src/components/AdminSettings.vue:37
 msgid "Save"
 msgstr "Sauvegarder"
+
+#: src/components/AdminSettings.vue:110
+msgid "Save error"
+msgstr "Erreur de sauvegarde"
+
+#: src/components/AdminSettings.vue:108
+msgid "Saved!"
+msgstr "Sauvegardé !"
+
+#: lib/Settings/AdminSection.php:28
+msgid "AppOrder"
+msgstr "AppOrder"
