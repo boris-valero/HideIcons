@@ -17,7 +17,7 @@ AppOrder is a Nextcloud customization app that lets administrators:
 ### Production (Nextcloud app deployment)
 
 1. Place this app in your Nextcloud `apps/` directory as `apporder`.
-2. Install the dependancies and build :
+2. Install dependencies and build:
 
 ```bash
 composer install && npm install && npm run build
@@ -46,7 +46,7 @@ Available languages:
 
 ## License
 
-Apache-2.0 license
+AGPL-3.0-or-later
 
 ## Author
 
