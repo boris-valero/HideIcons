@@ -6,6 +6,8 @@ AppOrder is a Nextcloud customization app that lets administrators:
 - Reorder application icons with drag and drop
 - Apply the same menu customization rules instance-wide
 
+As an administrator, you can configure the appearance of the Nextcloud menu for your users to suit your preferences.
+
 ## Requirements
 
 - Nextcloud `>= 32` and `<= 34`
